@@ -1,101 +1,103 @@
 draft 
 
+-----
+
 # 🚀 Task Master - Advanced Task Management Application
 
-Task Master adalah aplikasi manajemen tugas modern dan kaya fitur yang dibuat dengan **React** dan **Tailwind CSS**. Aplikasi ini menyediakan solusi komprehensif untuk mengatur tugas pribadi dan profesional dengan pemfilteran canggih, kategorisasi, dan statistik *real-time*.
+Task Master is a modern, feature-rich task management application built with **React** and **Tailwind CSS**. This application provides a comprehensive solution for organizing personal and professional tasks with advanced filtering, categorization, and real-time statistics.
 
-Ini adalah aplikasi **CRUD** (Create, Read, Update, Delete) berfitur lengkap yang dirancang untuk membantu pengguna mengelola tugas harian mereka secara efisien. Aplikasi ini menawarkan antarmuka yang intuitif dengan fitur-fitur canggih termasuk organisasi tugas berbasis prioritas, manajemen kategori, pelacakan status, dan kemampuan pencarian tingkat lanjut.
+This is a full-featured **CRUD** (Create, Read, Update, Delete) application designed to help users efficiently manage their daily tasks. The application offers an intuitive interface with powerful features including priority-based task organization, category management, status tracking, and advanced search capabilities.
 
-*Proyek ini dikembangkan sebagai bagian dari **IBM Student Developer Initiative Capstone Project**, yang menampilkan integrasi alat pengembangan berbantuan AI untuk mempercepat dan mengoptimalkan proses pengembangan.*
+*This project was developed as part of the **IBM Student Developer Initiative Capstone Project**, showcasing the integration of AI-assisted development tools to accelerate and optimize the development process.*
 
-## 📍 Demo Langsung
+## 📍 Live Demo
 
-[**Lihat aplikasi yang sedang berjalan di sini**](https://your-live-demo-link.com)
+[**View the live application here**](https://your-live-demo-link.com)
 
-## 📸 Pratinjau Aplikasi
+## 📸 Application Preview
 
-*Tambahkan demo GIF atau beberapa tangkapan layar di sini untuk memamerkan aplikasi Anda secara visual.*
+*Add a GIF demo or several screenshots here (blm jadi*
 
-| Tampilan Desktop | Tampilan Seluler |
+| Desktop View | Mobile View |
 | :---: | :---: |
 |  |  |
 
 -----
 
-## ✨ Fitur Utama
+## ✨ Key Features
 
-### 📊 Fungsionalitas Inti & Lanjutan
+### 📊 Core & Advanced Functionality
 
-  * **Operasi CRUD Penuh:** Buat, Baca, Perbarui, dan Hapus tugas dengan detail komprehensif (judul, deskripsi, kategori, prioritas, tanggal jatuh tempo, dan status).
-  * **Dasbor Statistik Real-time:** Penghitung langsung yang menunjukkan jumlah **Total Tugas**, **Tertunda**, **Sedang Dikerjakan**, dan **Selesai**.
-  * **Pencarian Lanjutan:** Pencarian teks lengkap di seluruh judul dan deskripsi tugas.
-  * **Pemfilteran Multi-level:** Filter tugas berdasarkan:
-      * **Status** (tertunda/sedang dikerjakan/selesai)
-      * **Prioritas** (rendah/sedang/tinggi)
-      * **Kategori** (pribadi/pekerjaan/belanja/kesehatan/lainnya)
-  * **Persistensi Data:** Menggunakan `sessionStorage` API untuk menyimpan tugas, sehingga data tetap ada bahkan setelah halaman disegarkan.
-  * **Toggle Status Cepat:** Klik ikon lingkaran untuk beralih status tugas dengan cepat (Tertunda ➔ Sedang Dikerjakan ➔ Selesai).
+  * **Full CRUD Operations:** Create, Read, Update, and Delete tasks with comprehensive details (title, description, category, priority, due date, and status).
+  * **Real-time Statistics Dashboard:** Live counters showing **Total Tasks**, **Pending**, **In-Progress**, and **Completed** tasks.
+  * **Advanced Search:** Full-text search across task titles and descriptions.
+  * **Multi-level Filtering:** Filter tasks by:
+      * **Status** (pending/in-progress/completed)
+      * **Priority** (low/medium/high)
+      * **Category** (personal/work/shopping/health/other)
+  * **Data Persistence:** Uses the `sessionStorage` API to save tasks, so data persists even after a page refresh.
+  * **Quick Status Toggle:** Click the circle icon to quickly cycle through task statuses (Pending ➔ In-Progress ➔ Completed).
 
-### 🎨 Pengalaman Pengguna (UX) & Antarmuka
+### 🎨 User Experience (UX) & Interface
 
-  * **Sistem Prioritas Visual:** *Badge* berkode warna untuk pengenalan prioritas instan:
-      * 🔴 **Prioritas Tinggi**
-      * 🟡 **Prioritas Sedang**
-      * 🟢 **Prioritas Rendah**
-  * **Desain Sepenuhnya Responsif:** Tata letak yang dioptimalkan untuk desktop, tablet, dan perangkat seluler.
-  * **Validasi Formulir:** Validasi bidang yang wajib diisi dengan pesan kesalahan yang mudah dipahami.
-  * **Dialog Konfirmasi:** Mencegah penghapusan yang tidak disengaja dengan konfirmasi.
-  * **Penanganan *Empty State*:** Pesan bermanfaat saat tidak ada tugas atau filter tidak menemukan hasil.
-  * **UI Interaktif:** Transisi yang mulus, efek *hover*, dan hierarki visual yang bersih.
+  * **Visual Priority System:** Color-coded badges for instant priority recognition:
+      * 🔴 **High Priority**
+      * 🟡 **Medium Priority**
+      * 🟢 **Low Priority**
+  * **Fully Responsive Design:** Optimized layouts for desktop, tablet, and mobile devices.
+  * **Form Validation:** Required field validation with user-friendly error messages.
+  * **Confirmation Dialogs:** Prevents accidental deletions with a confirmation prompt.
+  * **Empty State Handling:** Helpful messages when no tasks exist or filters return no results.
+  * **Interactive UI:** Smooth transitions, hover effects, and a clean visual hierarchy.
 
 -----
 
-## 🛠️ Teknologi & Peralatan yang Digunakan
+## 🛠️ Technologies & Tools Used
 
-| Kategori | Teknologi |
+| Category | Technology |
 | :--- | :--- |
-| **Framework & Library** | React 18 (Hooks: `useState`, `useEffect`), Vite |
+| **Framework & Libraries** | React 18 (Hooks: `useState`, `useEffect`), Vite |
 | **Styling** | Tailwind CSS, Lucide React (Icons) |
-| **Manajemen Data** | SessionStorage API, React Hooks |
-| **Perangkat Pengembangan** | Node.js, npm, ESLint, VS Code |
+| **Data Management** | SessionStorage API, React Hooks |
+| **Development Tools** | Node.js, npm, ESLint, VS Code |
 | **Version Control** | Git & GitHub |
-| **Platform Deployment** | Netlify, Vercel, GitHub Pages |
+| **Deployment Platforms** | Netlify, Vercel, GitHub Pages |
 
 -----
 
-## ⚙️ Memulai
+## ⚙️ Getting Started
 
-Untuk mendapatkan salinan lokal dan menjalankannya, ikuti langkah-langkah sederhana ini.
+To get a local copy up and running, follow these simple steps.
 
-### Prasyarat
+### Prerequisites
 
-Pastikan Anda telah menginstal [Node.js](https://nodejs.org/) (yang menyertakan npm) di mesin Anda.
+Ensure you have [Node.js](https://nodejs.org/) (which includes npm) installed on your machine.
 
-### Instalasi
+### Installation
 
-1.  **Clone repositori:**
+1.  **Clone the repository:**
     ```bash
     git clone https://github.com/your-username/your-repo-name.git
     ```
-2.  **Masuk ke direktori proyek:**
+2.  **Navigate into the project directory:**
     ```bash
     cd your-repo-name
     ```
-3.  **Instal paket NPM:**
+3.  **Install NPM packages:**
     ```bash
     npm install
     ```
-4.  **Jalankan server pengembangan (Vite):**
+4.  **Run the development server (Vite):**
     ```bash
     npm run dev
     ```
-5.  Buka [http://localhost:5173](https://www.google.com/search?q=http://localhost:5173) (atau port yang ditentukan di konsol Anda) untuk melihatnya di browser.
+5.  Open [http://localhost:5173](https://www.google.com/search?q=http://localhost:5173) (or the port specified in your console) to view it in the browser.
 
 -----
 
 ## 🌍 Deployment
 
-Aplikasi ini dibuat sebagai situs statis dan dapat dengan mudah di-*deploy* ke layanan hosting situs statis apa pun seperti:
+This application is built as a static site and can be easily deployed to any static site hosting service such as:
 
   * Netlify
   * Vercel
@@ -103,6 +105,6 @@ Aplikasi ini dibuat sebagai situs statis dan dapat dengan mudah di-*deploy* ke l
 
 -----
 
-## 📜 Lisensi
+## 📜 License
 
-Didistribusikan di bawah Lisensi MIT. Lihat file `LICENSE` untuk informasi lebih lanjut.
+Distributed under the MIT License. See the `LICENSE` file for more information.
