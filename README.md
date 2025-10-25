@@ -68,7 +68,7 @@ This is a full-featured **CRUD** (Create, Read, Update, Delete) application desi
 
 | Desktop View | Mobile View |
 | <img width="707" height="476" alt="image" src="https://github.com/user-attachments/assets/bec54833-b70f-4db2-a310-a03d0c3e77f4" />
- | :---: |
+ | <img width="384" height="855" alt="image" src="https://github.com/user-attachments/assets/630dcf97-69c7-441b-8d2e-02b42a543e9f" /> |
 |  |  |
 
 -----
