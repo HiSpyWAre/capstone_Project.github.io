@@ -1,17 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Trash2, Edit2, Check, X, Filter, Calendar, Flag, Search } from 'lucide-react';
 
-export default function TaskManager() {
-  const [tasks, setTasks] = useState([]);
-  const [filteredTasks, setFilteredTasks] = useState([]);
+type Task = {
+  id: number;
+  createdAt: string;
+  title: string;
+  description: string;
+  category: string;
+  priority: string;
+  dueDate: string;
+  status: string;
+};
+
+
+export default function App  () {
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [filteredTasks, setFilteredTasks] = useState<Task[]>([]);
   const [showForm, setShowForm] = useState(false);
-  const [editingTask, setEditingTask] = useState(null);
+  const [editingTask, setEditingTask] = useState<Task | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [filterStatus, setFilterStatus] = useState('all');
   const [filterPriority, setFilterPriority] = useState('all');
   const [filterCategory, setFilterCategory] = useState('all');
   
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<Omit<Task, 'id' | 'createdAt'>>({
     title: '',
     description: '',
     category: 'personal',
@@ -33,6 +45,7 @@ export default function TaskManager() {
   useEffect(() => {
     sessionStorage.setItem('taskmaster-tasks', JSON.stringify(tasks));
     applyFilters();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tasks, searchQuery, filterStatus, filterPriority, filterCategory]);
 
   const applyFilters = () => {
@@ -98,19 +111,19 @@ export default function TaskManager() {
     setEditingTask(null);
   };
 
-  const handleEdit = (task) => {
+  const handleEdit = (task: Task) => {
     setFormData(task);
     setEditingTask(task);
     setShowForm(true);
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = (id: number) => {
     if (window.confirm('Are you sure you want to delete this task?')) {
       setTasks(tasks.filter(task => task.id !== id));
     }
   };
 
-  const toggleTaskStatus = (id) => {
+  const toggleTaskStatus = (id: number) => {
     setTasks(tasks.map(task => {
       if (task.id === id) {
         const statusIndex = statuses.indexOf(task.status);
@@ -121,7 +134,7 @@ export default function TaskManager() {
     }));
   };
 
-  const getPriorityColor = (priority) => {
+  const getPriorityColor = (priority: string) => {
     switch(priority) {
       case 'high': return 'bg-red-100 text-red-800 border-red-300';
       case 'medium': return 'bg-yellow-100 text-yellow-800 border-yellow-300';
@@ -130,7 +143,7 @@ export default function TaskManager() {
     }
   };
 
-  const getStatusColor = (status) => {
+  const getStatusColor = (status: string) => {
     switch(status) {
       case 'completed': return 'bg-green-500';
       case 'in-progress': return 'bg-blue-500';
@@ -440,3 +453,29 @@ export default function TaskManager() {
     </div>
   );
 }
+// import React from 'react';
+// import logo from './logo.svg';
+// import './App.css';
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit <code>src/App.tsx</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           Learn React
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
+
+// export default App;
